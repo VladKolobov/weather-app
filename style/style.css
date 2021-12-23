@@ -1,0 +1,67 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://source.unsplash.com/1920x800/?Lviv') 0 0/cover no-repeat;
+}
+
+.weather-card {
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    border-radius: 30px;
+    margin: 0 7px;
+    color: #fff;
+    background-color: rgba(128, 109, 109, 0.7);
+}
+
+.search {
+    width: 100%
+}
+
+.search-bar {
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: 7px;
+    padding: .8rem;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.weather-details {
+    padding: .8rem;
+}
+
+.location {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.weather-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.temperature {
+    padding-bottom: 1rem;
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+.feels-like,
+.humidity,
+.wind-speed {
+    padding-top: .2rem;
+    font-size: 1.5rem;
+}
+
