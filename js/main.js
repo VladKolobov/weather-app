@@ -1,3 +1,4 @@
+const searchForm = document.querySelector('.search-form');
 const searchBar = document.querySelector('.search-bar');
 const weatherDetails = document.querySelector('.weather-details');
 
@@ -15,10 +16,9 @@ function onSuccess(position){
         .then(weatherData => renderMarkup(weatherData))
 }
 
-searchBar.addEventListener('keyup', (event) => {
-    if(event.key === 'Enter') {
+searchForm.addEventListener('submit', (event) => {
+        event.preventDefault();
         fetchWeatherDetails()
-    }
 })
 
 function fetchWeatherDetails() {
@@ -64,9 +64,9 @@ function setMarkup(weatherData) {
             <div class="weather-icon">
                 <img src=${getWeatherIcon(weatherData)} alt="">
             </div>
-            <div class="temperature">${Math.round(temp)}&deg;C</div>
-            <div class="feels-like">Ощущается на ${Math.round(feelsLike)}&deg;C</div>
-            <div class="humidity">Влажность: ${humidity}&#37;</div>
+            <div class="temperature">${Math.round(temp)}°C</div>
+            <div class="feels-like">Ощущается на ${Math.round(feelsLike)}°C</div>
+            <div class="humidity">Влажность: ${humidity}%</div>
             <div class="wind-speed">Скорость ветра: ${speed.toFixed(1)} М/с</div>`
 }
 
